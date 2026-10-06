@@ -1,0 +1,178 @@
+:root {
+  --fundo: #eaf0f2;
+  --superficie: #ffffff;
+  --texto: #1c2b33;
+  --texto-suave: #52646d;
+  --borda: #c5d3d9;
+  --destaque: #0e6b6b;
+  --destaque-escuro: #0a5252;
+  --ok: #17693a;
+  --erro: #a32a2a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  line-height: 1.5;
+}
+
+.pagina {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+main p {
+  text-align: center;
+}
+
+legend {
+  text-align: center;
+}
+
+.intro {
+  margin: 0 0 1.5rem;
+  color: var(--texto-suave);
+}
+
+form {
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+fieldset {
+  border: 0;
+  margin: 0 0 1.5rem;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.linha {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.campo {
+  flex: 1 1 180px;
+  margin-bottom: 1rem;
+}
+
+.campo-cep {
+  max-width: 200px;
+  margin-bottom: 0.25rem;
+}
+
+.campo-grande {
+  flex: 3 1 240px;
+}
+
+.campo-pequeno {
+  flex: 1 1 90px;
+}
+
+.campo-uf {
+  flex: 0 1 80px;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+  font: inherit;
+  color: inherit;
+  background: #fff;
+}
+
+input:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--destaque);
+  outline-offset: 2px;
+}
+
+.status {
+  min-height: 1.5rem;
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+}
+
+.status-ok {
+  color: var(--ok);
+}
+
+.status-erro {
+  color: var(--erro);
+}
+
+.acoes {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 0.65rem 1.25rem;
+  border-radius: 6px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.botao-principal {
+  background: var(--destaque);
+  border: 1px solid var(--destaque);
+  color: #fff;
+}
+
+.botao-principal:hover {
+  background: var(--destaque-escuro);
+}
+
+.botao-secundario {
+  background: transparent;
+  border: 1px solid var(--borda);
+  color: var(--texto);
+}
+
+.botao-secundario:hover {
+  background: var(--fundo);
+}
+
+@media (max-width: 480px) {
+  form {
+    padding: 1rem;
+  }
+
+  .campo-cep {
+    max-width: none;
+  }
+}
